@@ -1,0 +1,16 @@
+<h1><%= title %></h1>
+<div class="content row">
+<div id="searchBar" class="span10 offset3">
+<h2>write something here:</h2>
+
+<input type="text" id="search" autocomplete="off" class="xlarge"placeholder="Ex: blue" name="search"></input>
+</div>
+<div class="span16">
+<div id="images">
+	<% if (data!=""){%>
+		<%- partial('partials/image', { collection: data }) %>
+	<% }%>
+</div>
+<script src="javascripts/index.js" type="text/javascript"></script>
+</div>
+</div>

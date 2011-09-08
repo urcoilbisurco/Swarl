@@ -1,0 +1,80 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+background-color:#F5F5ED;
+}
+.content{
+	padding-top:50px;
+}
+h1{
+	font-family: 'Montez', cursive;
+	font-size:100px;
+	font-style:italic;
+}
+#searchBar{
+	padding-top:160px;
+}
+h2{
+	font-size:50px;
+	line-height:0px;
+	padding-bottom:40px;
+	font-family: 'Rochester', cursive;
+}
+input[type="text"]{
+	width:100% !important;
+	height:50px;
+	font-family: 'Rochester', cursive;
+	line-height:50px;
+	font-size:40px;
+	padding-left:20px;
+	border-radius:10px;
+	
+	
+	border:1px solid rgba(0,0,0, 0.2);
+	outline:none;
+}
+input:focus{
+	border:1px solid rgba(0,0,0, 0.2)!important;
+}
+
+
+#error{
+	
+	font-family: 'Rochester', cursive;
+	font-size:30px;
+}
+html{
+	background-color:#F5F5ED;
+}
+
+a {
+  color: #00B7FF;
+}
+#images{
+	margin-top:50px;
+}
+#images a{
+	
+}
+#images .img:hover{
+	box-shadow:0px 0px 10px rgba(173, 173, 186, 1);
+	text-decoration:none;
+}
+#images .img{
+	width:100%;
+	display:block;
+	margin:5px;
+	padding:10px 0 10px 0px;
+	border:1px solid #D1D1CA;
+	border-radius:10px;
+	background-color:white;
+}
+#images .img img{
+	width:260px;
+	padding:0 10px;
+}
+#images .img .info{
+	padding:0 10px;
+	padding-top:15px;
+	color:gray;
+}
