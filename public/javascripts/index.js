@@ -10,7 +10,7 @@ $(document).ready(function(){
 				if(search!=oldValue){
 					
 					$("#images").fadeOut();
-				  	$.post('http://localhost:3000', { search: search}, function(result) {
+				  	$.post('http://http://swarl.herokuapp.com', { search: search}, function(result) {
 						$("#searchBar").animate({
 							paddingTop : "0"
 						},350);
@@ -31,5 +31,7 @@ $(document).ready(function(){
 		end=false;
 		set=true;	
 	});
+
+	
 });
 

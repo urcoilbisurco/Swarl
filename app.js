@@ -5,7 +5,7 @@ var app = config.app;
 // Routes
 
 app.get('/', function(req, res){
-	/*helpers.getTag("blue", res, function(data){
+	helpers.getTag("blue", res, function(data){
 			res.render(
 				'index',
 				{
@@ -13,8 +13,8 @@ app.get('/', function(req, res){
 					data: data
 		  		}
 			);
-	});*/
-	res.render('index', {title:'Swarl', data:""});
+	});
+	//res.render('index', {title:'Swarl', data:""});
 	
   	
 });

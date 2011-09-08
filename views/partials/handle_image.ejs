@@ -1,1 +1,5 @@
 <%- partial('partials/image', { collection: data }) %>
+<script>
+$('img').bind('load',function(){
+	$(this).parent().fadeIn('slow');	
+});</script>
