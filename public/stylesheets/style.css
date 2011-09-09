@@ -78,3 +78,9 @@ a {
 	padding-top:15px;
 	color:gray;
 }
+#loading{
+	position:relative;
+	top:120px;
+	font-family: 'Rochester', cursive;
+	font-size:60px;
+}

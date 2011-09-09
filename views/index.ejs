@@ -6,6 +6,7 @@
 <input type="text" id="search" autocomplete="off" class="xlarge"placeholder="Ex: blue" name="search"></input>
 </div>
 <div class="span16">
+	<div style="display:none"class="offset5 span4" id="loading">loading...</div>
 <div id="images">
 	<% if (data!=""){%>
 		<%- partial('partials/image', { collection: data }) %>

@@ -9,13 +9,15 @@ $(document).ready(function(){
 				search=$("#search").val();
 				if(search!=oldValue){
 					
+					$("#loading").fadeIn();
 					$("#images").fadeOut();
 				  	$.post('http://swarl.herokuapp.com', { search: search}, function(result) {
 						$("#searchBar").animate({
 							paddingTop : "0"
 						},350);
 						$('#images').html(result).fadeIn();
-
+						
+						
 					});
 					end=false;
 					set=false;
@@ -29,7 +31,7 @@ $(document).ready(function(){
 	
 	$("#search").keyup(function() {
 		end=false;
-		set=true;	
+		set=true;
 	});
 
 	
