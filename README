@@ -1,0 +1,5 @@
+use swarl to search images on instagram.
+
+swarl use a super-instant engine that is called only when you end to write (so you can't distract yourself when you are writing :) )
+
+swarl is written in node.js, and use the LessFramework for mobile compatibility.
