@@ -5,7 +5,7 @@ var app = config.app;
 // Routes
 
 app.get('/', function(req, res){
-	helpers.getTag("blue", res, function(data){
+	/*helpers.getTag("blue", res, function(data){
 			res.render(
 				'index',
 				{
@@ -13,12 +13,13 @@ app.get('/', function(req, res){
 					data: data
 		  		}
 			);
-	});
-	//res.render('index', {title:'Swarl', data:""});
+	});*/
+	res.render('index', {title:'Swarl', data:""});
 	
   	
 });
 app.post('/', function(req, res){
+	if (req.xhr){
 	helpers.getTag(req.body.search, res, function(data){
 			res.render(
 				"partials/handle_image.ejs",
@@ -28,6 +29,9 @@ app.post('/', function(req, res){
 				}
 			);
 		});
+	} else{
+		res.redirect('/');
+	}
 });
 
 app.listen(process.env.PORT || 3000);

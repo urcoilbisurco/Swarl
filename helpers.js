@@ -8,13 +8,13 @@ Instagram.set('client_secret', '457e11a6f47c4631bb41a2b5c4152fb2');
 function getTag(tag , res, callback){
     Instagram.tags.recent({ name: tag, count:30,
 	  	complete:function(data, pagination){
-			(data.length != 0) ? callback(data) : error(res, "I didn't find any pics! Try search another word! ")
+			(data.length != 0) ? callback(data) : error(res, "I didn't find any pics...<br />try search another word! ")
 		},
 		error: function(errorMessage, errorObject, caller){
 		      // errorMessage is the raised error message
 		      // errorObject is either the object that caused the issue, or the nearest neighbor
 		      // caller is the method in which the error occurred
-			error(res , ((tag.length==0) ? "Search something (like: red, sun, clouds...)" : "I can't search this word, sorry."));
+			error(res , ((tag.length==0) ? "Search something <br />(like: red, sun, clouds...)" : "I can't search this word, sorry."));
 			
 		}
 	});

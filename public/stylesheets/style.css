@@ -1,23 +1,123 @@
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge {
+	font-size: 55px;
+	line-height: 66px;
+	letter-spacing: -1px;
+}
+
+.large {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big {
+	font-size: 22px;
+	line-height: 30px;
+}
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
 body {
-  padding: 50px;
+	width: 896px;
+	padding: 20px 48px 84px;
+	margin:0 auto;
+	background: rgb(232,232,232);
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 background-color:#F5F5ED;
 }
-.content{
-	padding-top:50px;
+html{
+	background-color:#F5F5ED;
 }
-h1{
+.photo{
+	width:252px;
+	margin-left:24px;
+	display:inline;
+	float:left;
+	margin-bottom:20px;
+}
+.content{
+
+}
+#title{
+	margin-left:24px;
 	font-family: 'Montez', cursive;
-	font-size:100px;
 	font-style:italic;
 }
 #searchBar{
-	padding-top:160px;
+	padding-top:120px;
+	margin-left:184px;
+	width:528px;
 }
 h2{
-	font-size:50px;
-	line-height:0px;
-	padding-bottom:40px;
+	padding-bottom:10px;
 	font-family: 'Rochester', cursive;
 }
 input[type="text"]{
@@ -26,8 +126,10 @@ input[type="text"]{
 	font-family: 'Rochester', cursive;
 	line-height:50px;
 	font-size:40px;
-	padding-left:20px;
+	padding-left:10px;
 	border-radius:10px;
+	margin:0 -5px;
+	color:gray;
 	
 	
 	border:1px solid rgba(0,0,0, 0.2);
@@ -38,17 +140,16 @@ input:focus{
 }
 
 
-#error{
-	
+#error, #loading{
 	font-family: 'Rochester', cursive;
-	font-size:30px;
+	font-size:35px;
+	margin-left:276px;
 }
-html{
-	background-color:#F5F5ED;
-}
+
 
 a {
   color: #00B7FF;
+text-decoration:none;
 }
 #images{
 	margin-top:50px;
@@ -63,15 +164,15 @@ a {
 #images .img{
 	width:100%;
 	display:block;
-	margin:5px;
 	padding:10px 0 10px 0px;
 	border:1px solid #D1D1CA;
 	border-radius:10px;
 	background-color:white;
 }
 #images .img img{
-	width:260px;
+	width:232px;
 	padding:0 10px;
+	vertical-align:top;
 }
 #images .img .info{
 	padding:0 10px;
@@ -80,7 +181,174 @@ a {
 }
 #loading{
 	position:relative;
-	top:120px;
-	font-family: 'Rochester', cursive;
-	font-size:60px;
+	top:50px;
+}
+#footer{
+	display:none;
+	color:grey;
+}
+#footer a{
+	color:black;
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 20px 28px 60px;
+	}
+	#images{
+		margin-top:30px;
+		margin-left:68px;
+	}
+	.photo{
+		width:252px;
+		margin-left:24px;
+	}
+	#searchBar{
+		
+		margin-left:92px;
+		width:528px;
+	}
+	#error{
+		font-size:35px;
+		margin-left:92px;
+	}
+	
+} 
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+
+	body {
+		width: 252px;
+		padding: 20px 28px 60px;
+	}
+	#images{
+		margin-top:20px;
+		display:block;
+	}
+	.photo{
+		width:252px;
+		margin-left:0px;
+	}
+	#images .img{
+		margin:5px 0;
+	}
+	#images .img img{
+		width:160px;
+		display:inline;
+		padding:0 10px;
+	}
+	#searchBar{
+		padding-top:20px;
+		margin-left:0px;
+		width:252px;
+	}
+
+	#images .img .info{
+		padding:0 10px;
+		padding-top:15px;
+		color:gray;
+		display:inline;
+	}
+	.gigantic {
+		font-size: 60px;
+		line-height: 70px;
+		letter-spacing: -1px;
+	}
+
+	.huge {
+		font-size: 30px;
+		line-height: 35px;
+	}
+	#title{
+		margin-left:0;
+	}
+	#error{
+		font-size:25px;
+		margin-left:24px;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+
+	#images{
+		margin-top:20px;
+		display:block;
+	}
+	.photo{
+		width:252px;
+		margin-left:92px;
+	}
+	#images .img{
+		margin:5px 0;
+	}
+	#images .img img{
+		width:160px;
+		display:inline;
+		padding:0 10px;
+	}
+	#searchBar{
+		padding-top:20px;
+		margin-left:0px;
+		width:436px;
+	}
+
+	#images .img .info{
+		padding:0 10px;
+		padding-top:15px;
+		color:gray;
+		display:inline;
+	}
+	.gigantic {
+		font-size: 60px;
+		line-height: 70px;
+		letter-spacing: -1px;
+	}
+
+	.huge {
+		font-size: 30px;
+		line-height: 35px;
+	}
+	#title{
+		margin-left:0;
+	}
+	#error{
+		font-size:25px;
+		margin-left:92px;
+	}
+	
 }
