@@ -218,7 +218,7 @@ px      68    160    252    344    436    528    620    712    */
 		margin-left:92px;
 		width:528px;
 	}
-	#error{
+	#error, #loading{
 		font-size:35px;
 		margin-left:92px;
 	}
@@ -281,7 +281,7 @@ px      68    160    252    */
 	#title{
 		margin-left:0;
 	}
-	#error{
+	#error, #loading{
 		font-size:25px;
 		margin-left:24px;
 	}
@@ -346,7 +346,7 @@ px      68    160    252    344    436    */
 	#title{
 		margin-left:0;
 	}
-	#error{
+	#error, #loading{
 		font-size:25px;
 		margin-left:92px;
 	}
